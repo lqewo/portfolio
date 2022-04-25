@@ -1,0 +1,355 @@
+@import '../../node_modules/swiper/swiper-bundle.css';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+ul,
+li,
+button {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  border: 0;
+  background-color: inherit;
+  color: #fff;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1398px;
+}
+
+.container-fluid {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #F0F0F0;
+  color: #F0F0F0;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.portfolio__box {
+  position: relative;
+  height: 100%;
+}
+
+.portfolio__inner {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.no-webp .portfolio__inner #site-1::before{
+  background-image: url(../img/inkom.png); }
+
+.no-webp .portfolio__inner #site-2::before{
+  background-image: url(../img/whitebit.png); }
+
+.no-webp .portfolio__inner #site-3::before{
+  background-image: url(../img/riksha.png); }
+
+.no-webp .portfolio__inner #site-4::before{
+  background-image: url(../img/holyeat.png); }
+
+.portfolio__btn {
+  background: #FF9B9B;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  font-weight: 700;
+  line-height: 22px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.portfolio__btn:disabled {
+  opacity: 0.3;
+}
+
+.portfolio__btn--next {
+  position: absolute;
+  margin-top: 127px;
+  margin-right: 102px;
+  right: 0;
+  top: 0;
+}
+
+.portfolio__btn--prev {
+  position: absolute;
+  margin-bottom: 152px;
+  margin-left: 53px;
+  left: 0;
+  bottom: 0;
+}
+
+.portfolio__item {
+  transition: all 0.5s;
+  position: relative;
+  width: 350px;
+  height: 350px;
+  background-color: #C4C4C4;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  padding: 25px 20px 30px 20px;
+}
+
+.portfolio__item:not(:first-child) {
+  counter-increment: item;
+  position: relative;
+}
+
+.portfolio__item:not(:first-child)::after {
+  position: absolute;
+  content: counter(item);
+  bottom: 0;
+  right: 0;
+  padding-bottom: 16px;
+  padding-right: 14px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  color: #f0f0f0;
+}
+
+.portfolio__item:not(:first-child):hover .portfolio__item-name {
+  background-color: #fff;
+  border-radius: 5px;
+  color: #FF9B9B;
+  padding: 5px 10px;
+}
+
+.portfolio__item:not(:first-child):hover::before {
+  opacity: 0.7;
+  filter: blur(0rem);
+}
+
+.portfolio__item:not(:first-child)::before {
+  filter: blur(0.3rem);
+  transition: all 0.5s;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  content: "";
+  opacity: 0.4;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+}
+
+.portfolio__item:first-child {
+  background-color: #FF9B9B;
+}
+
+.portfolio__item:first-child:hover .portfolio__item .portfolio__glow {
+  transform: rotate(45deg) translate(450%, 0);
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.portfolio__item:first-child > img {
+  transition: all 0.3s;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  max-width: 60px;
+  height: auto;
+}
+
+.portfolio__item:nth-child(4n) {
+  margin-left: 268px;
+}
+
+.portfolio__item:last-child {
+  margin-right: 0;
+}
+
+.portfolio__item-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  padding-top: 121px;
+}
+
+.portfolio__item-screen {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  background-color: #fff;
+  color: #FF9B9B;
+  border-radius: 5px;
+  padding: 4px;
+  min-width: 80px;
+}
+
+.portfolio__item-name {
+  position: absolute;
+  transition: all 0.3s;
+  bottom: 0;
+  left: 0;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+}
+
+.portfolio__item-num {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.riksha {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #1f1f1f;
+}
+
+.riksha__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.riksha__list {
+  margin-top: 25px;
+  padding: 50px 0 80px;
+  background-color: #fff;
+}
+
+.riksha__list > li {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.riksha__list > li > a {
+  transition: all 0.3s;
+  color: #FF9B9B;
+  text-align: center;
+  width: 200px;
+  border: 1px solid #C4C4C4;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 4px 10px;
+}
+
+.riksha__list > li > a:hover {
+  color: #fff;
+  background-color: #FF9B9B;
+}
+
+@media (max-width: 1400px) {
+  .portfolio__item {
+    width: 300px;
+    height: 300px;
+  }
+
+  .portfolio__item-title {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 1270px) {
+  .portfolio__inner {
+    margin-top: 50px;
+    flex-direction: column;
+  }
+
+  .portfolio__item:nth-child(4n),
+  .portfolio__item {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .portfolio__item:first-child > img {
+    height: 80px;
+    margin-right: 0;
+    right: 50%;
+    transform: rotate(90deg) translateY(-50%);
+    margin-bottom: 10px;
+  }
+
+  .portfolio .btn {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .portfolio__btn {
+    position: relative;
+  }
+
+  .portfolio__btn--prev {
+    margin: 0;
+    margin-right: 20px;
+  }
+
+  .portfolio__btn--next {
+    margin: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .container-fluid {
+    padding: 0 15px;
+  }
+}
+
+.webp .portfolio__inner #site-1::before{ background-image: url(../img/inkom.webp); }
+
+.webp .portfolio__inner #site-2::before{ background-image: url(../img/whitebit.webp); }
+
+.webp .portfolio__inner #site-3::before{ background-image: url(../img/riksha.webp); }
+
+.webp .portfolio__inner #site-4::before{ background-image: url(../img/holyeat.webp); }
