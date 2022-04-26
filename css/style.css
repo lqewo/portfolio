@@ -225,25 +225,14 @@ body {
   background-color: #F267EB;
   border-radius: 4px;
   border-left: 5px solid #A260F3;
-  font-family: "Neue Machina" sans-serif;
+  font-family: NeueMachina;
   line-height: 88px;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 72px;
 }
 
 .portfolio__item:first-child:hover {
   background-color: #A260F3;
-}
-
-.portfolio__item:first-child > img {
-  transition: all 0.3s;
-  margin-bottom: 30px;
-  margin-right: 20px;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  max-width: 60px;
-  height: auto;
 }
 
 .portfolio__item:nth-child(4n) {
